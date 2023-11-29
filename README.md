@@ -1,6 +1,6 @@
 <h1 align="center"> Bem vinda(o) ao Case de Fraude😊 </h1>
 
-![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=DESENVOLVIMENTO&color=<COLOR>)
+![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=COMPLETO&color=<COLOR>)
 
 <h1 align ="center"> Objetivo do Case🤔</h1>
 
@@ -52,10 +52,15 @@ Realizei análise estatística descritiva univariadas, além de calcular KPIs im
 ![modelo_antigo](https://github.com/KaueAbbe/Case_Fraude/assets/68445400/e3056402-a123-4fcf-a60d-13f7a735e0e0)
 
 
-* Taxa de Fraude: 5%
-* Aprovação: 62.5%
-* Recall: 73.76%
-* Valor Aprovado em Fraudes: $110954.23
+
+
+| Métrica                             | Valor             |
+|-------------------------------------|-------------------|
+| Recall                              | 73.76%            |
+| Taxa de Fraude                       | 5%                |
+| Aprovação                            | 62.5%             |
+| Valor Aprovado em Fraudes            | R$110.954,23      |
+
 
 
 Vemos no gráfico um problema do modelo atual: sobreposição da distribuição dos scores para os grupos fraude e não fraude. A sobreposição significa que o modelo não está conseguindo diferenciar o comportamento de cada grupo, e assim não realizar classificações separando os dois grupos. Este é um resultado que mudarei, trazendo mais especificidade no momento de classificar.  
@@ -93,31 +98,55 @@ Criei uma simulação que realiza o seguinte passo-a-passo:
  
 <h2 align ="left"> Criação do Modelo Classificação</h2>
 
-
-
-* Pré-Processamento dos Dados
-* Sepração dados treino, teste e validação
-* Definição de Recall e Métrica de Bussines para avaliação
-* Criação de um modelo Dummy e LogisticRegresion como Baseline
-* Criação de seis modelos de machine learning
-* Otimização por Hiperparâmetros do melhor modelo
+* Análise de Correlação e retirada de features multicolineares
+* Definição da Baseline como o Recall do Modelo Antigo: 73.72%
+* Separação de dados de treino, teste e validação
+* Criação da Pipeline para treinamento de modelos com seguintes passos:
+  1. Aplica Category Encoder, utilizando Weigth of Evidence,
+  2. Escalonamento dos Dados
+* Definição de Recall e F1 como métrica de Bussines
+* Definicação de Validação Cruzada para treinamento
+* Treinamento de seis modelos de machine learning de classificação, e definição do melhor modelo
+* Otimização por Hiperparâmetros do Modelo Gradient Boost
+* Criação da Pipeline do modelo Otimizado
 
   
-<h3 align ="left">Modelo Novo</h3>
+
+  
+<h3 align ="left"> Resultados Modelo Novo</h3>
+
+O modelo apresentou os seguintes resultados finais, após avaliação do ponto de threashold que maximiza os lucros:
+
+| Métrica                             | Valor             |
+|-------------------------------------|-------------------|
+| Recall Novo                         | 86%               |
+| $$ Salvo pelo classificador         | R$11.663,02      |
+| Diminuição em Perdas por Aprovação   | 97%               |
+
+Apresentando a seguinte matriz confusão:
+
+![confusion](https://github.com/KaueAbbe/Case_Fraude/assets/68445400/3afceff4-f483-4cbd-8eda-04076ea7e944)
+
 
 ![modelo_novo](https://github.com/KaueAbbe/Case_Fraude/assets/68445400/d5c14840-16e3-4bfc-954b-34623bc069ec)
 
+Este duas últimas figuras mostram o comportamento final do novo modelo, que apresenta separação mais defenitiva das duas classes e classificações com taxa de Recall maior. **O recall passou de 73.7% para 86%.**
 
-<h2 align ="center"> Quais bibliotecas usei durante o Challenge?</h2>
+<h2 align ="center"> Próximas Etapas</h2>
+
+Os resultados finais apresentados foram obtidos com dados de validação do modelos, o que mostra que o modelo perfomaria bem no dia a dia. O próximo passo seria fazer o deploy do modelo, para ser utilizado pela empresa durante o dia a dia. 
+
+
+<h2 align ="center"> Quais bibliotecas usei durante o Case?</h2>
 
 1. Tratamento: Pandas 🐼|
-2. Análise Exploratória: Pandas, Numpy, scipy, StatsModels, Plotly |
-3. Criação do Modelo: Pandas, Numpy, Sklearn, YellowBrick, Pickle, seaborn, matplotlib |
+2. Análise Exploratória: Numpy, scipy, matplotlib, graphviz |
+3. Criação do Modelo: Sklearn, imblearn, category encoders, Pickle, seaborn |
 
-   ## Detalhes do projeto
+## Detalhes do projeto
 
 
-Os dados deste case foram retirados do P.E.D, e você pode acessar o P.E.D [aqui](https://www.renatabiaggi.com/ped)
+Os dados deste case foram retirados do P.E.D, e você pode acessar o P.E.D [aqui](https://www.renatabiaggi.com/ped). 
 
 
 
@@ -134,7 +163,7 @@ Os dados deste case foram retirados do P.E.D, e você pode acessar o P.E.D [aqui
  
  2. Mestrando em Física Estatística na Universidade de Brasília
     
- 3. Aprofundando como Cientista de Dados</h4>
+ 3. Cientista de Dados</h4>
 <h4> Entre em contato por</h4>
 <div align = "center"> 
 
