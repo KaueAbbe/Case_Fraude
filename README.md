@@ -159,16 +159,16 @@ Os dados deste case foram retirados do P.E.D, e você pode acessar o P.E.D [aqui
 <h4> Feito com 💙 por Kaue Hermann Abbehausen 👋🏽 
 <br/> 
  
- 1. Formado em Física na Universidade Federal de Uberlândia
+ 1.Cientista de Dados
  
- 2. Mestrando em Física Estatística na Universidade de Brasília
-    
- 3. Cientista de Dados</h4>
+ 2. Formado em Física na Universidade Federal de Uberlândia
+ 
+ 3. Mestre em Física Estatística na Universidade de Brasília</h4>
 <h4> Entre em contato por</h4>
 <div align = "center"> 
 
- 
+<div align = "center"> 
    <a href="https://www.linkedin.com/in/kaue-abbehausen-5b1922165/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-  <a href="https://www.instagram.com/cienciaeanimacao/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-  <a href = "mailto:kaueabbehausen@hotmail.com"><img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a>
+  <a href="https://www.instagram.com/kaue.hermann/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+  <a href = "mailto:kaueabbehausen@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </div>
